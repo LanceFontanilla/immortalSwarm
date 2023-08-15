@@ -1,0 +1,17 @@
+header {
+    color: rgb(155, 57, 57);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+
+}
+
+footer {
+    color: rgb(155, 57, 57);
+}
+
+.bg-red {
+    background-color: rgb(155, 57, 57);
+}

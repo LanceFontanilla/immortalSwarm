@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Evo's Immortal Swarm</title>
+</head>
+
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body data-bs-theme="dark" class="">
+    <header class="container-fluid">
+        <section class="row">
+            <div class="col-12">
+                Immortal Swarm
+            </div>
+        </section>
+    </header>
+
+    <main class="container-fluid">
+        <section class="row text-center p-3">
+
+            <div class="col-4 border card">
+                <p class="p-2">🏤</p>
+                <button class="rounded bg-red text-light" onclick="postOffice()">Post Office</button>
+                <p id="🏤"></p>
+            </div>
+            <div class="col-4 border card">
+                <p class="p-2">🏥</p>
+                <button class="rounded bg-red text-light" onclick="hospital()">Hospital</button>
+                <p id="🏥"></p>
+            </div>
+            <div class="col-4 border card">
+                <p class="p-2">🏭</p>
+                <button class="rounded bg-red text-light" onclick="circus()">Circus</button>
+                <p id="🏭"></p>
+            </div>
+            <div class="col-4 border card">
+                <p class="p-2">🏢</p>
+                <button class="rounded bg-red text-light" onclick="hotel()">Hotel</button>
+                <p id="🏢"></p>
+            </div>
+            <div class="col-4 border card">
+                <p class="p-2">🏣</p>
+                <button class="rounded bg-red text-light" onclick="bank()">Bank</button>
+                <p id="🏣"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="container-fluid">
+        <section class="row text-center">
+            <div class="col-12">
+                BEWARE: The Hunter is near!
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

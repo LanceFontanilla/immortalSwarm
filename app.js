@@ -68,7 +68,7 @@ const people = [{
 function postOffice() {
     console.log("clicked postOffice 🏤")
 
-    foundPeople()
+    foundPeople('🏤')
 
 }
 
@@ -100,15 +100,15 @@ function drawPeople() {
     });
 }
 
-function foundPeople() {
-    let inLocation = people.filter((person) => {
-        if (person.picture == person.location) {
+function foundPeople('🏤') {
+    people.forEach((person) => {
+        if (currentlocation == person.location) {
             person.picture = '🦇'
         }
     }
 
     )
-    console.log(inLocation)
+
 
 
 
