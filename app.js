@@ -66,54 +66,74 @@ const people = [{
 
 
 function postOffice() {
-    console.log("clicked postOffice 🏤")
-
-    foundPeople('🏤')
-
+    //  console.log("clicked postOffice 🏤")
+    swarm('🏤')
 }
 
 function hospital() {
-    console.log("clicked hospital 🏥")
+    //  console.log("clicked hospital 🏥")
+    swarm('🏥')
 }
 
 function circus() {
-    console.log("clicked circus 🏭")
+    // console.log("clicked circus 🏭")
+    swarm('🏭')
+
 }
 
 function hotel() {
-    console.log("clicked hotel 🏢")
+    // console.log("clicked hotel 🏢")
+    swarm('🏢')
 }
 
 function bank() {
-    console.log("click bank 🏣")
+    // console.log("click bank 🏣")
+    swarm('🏣')
 }
+
+let hoursLeft = 6
 
 function drawPeople() {
     locations.forEach((location) => {
-        console.log(location)
+        //  console.log(location)
         let inLocation = people.filter((person) => person.location == location)
-        console.log(inLocation)
+        //  console.log(inLocation)
         let personPicture = inLocation.map((person) => person.picture + person.name)
-        console.log(personPicture)
+        // console.log(personPicture)
         document.getElementById(location).innerText = personPicture.join(',')
 
     });
 }
 
-function foundPeople('🏤') {
-    people.forEach((person) => {
-        if (currentlocation == person.location) {
-            person.picture = '🦇'
-        }
+function swarm(location) {
+    let foundPeople = people.filter((person) => person.location == location)
+    foundPeople.filter((person) => person.picture = '🦇')
+
+    movePeople()
+    win()
+    drawPeople()
+
+
+}
+
+function win() {
+    let bats = people.filter(person => person.picture == '🦇')
+    let win = true
+    hoursLeft = hoursLeft - 1;
+    //console.log(hoursLeft)
+    document.getElementById('hoursLeft').innerText = hoursLeft
+
+    if (bats.length == people.length) {
+        window.alert('You have Won!')
     }
+}
 
-    )
-
-
-
-
-
-
+function movePeople() {
+    people.forEach((person) => {
+        let randomIndex = Math.floor(Math.random() * locations.length)
+        //console.log(randomIndex)
+        person.location = locations[randomIndex]
+    })
 }
 
 
