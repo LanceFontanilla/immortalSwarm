@@ -91,7 +91,7 @@ function bank() {
     swarm('🏣')
 }
 
-let hoursLeft = 6
+let hoursLeft = 7
 
 function drawPeople() {
     locations.forEach((location) => {
@@ -118,13 +118,14 @@ function swarm(location) {
 
 function win() {
     let bats = people.filter(person => person.picture == '🦇')
-    let win = true
     hoursLeft = hoursLeft - 1;
     //console.log(hoursLeft)
     document.getElementById('hoursLeft').innerText = hoursLeft
 
-    if (bats.length == people.length) {
+    if (bats.length == people.length && hoursLeft > 0) {
         window.alert('You have Won!')
+    } else if (hoursLeft <= 0) {
+        window.alert('You Lose!')
     }
 }
 
